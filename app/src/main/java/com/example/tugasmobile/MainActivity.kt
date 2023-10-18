@@ -43,83 +43,14 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Column (
-                modifier = Modifier
-                    .fillMaxSize(),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-
-                Box {
-                    Image(
-                        modifier = Modifier
-                            .size(150.dp),
-                        painter = painterResource(id = R.drawable.kucing),
-                        contentDescription = "Foto Profil",
-                        alignment = Alignment.Center
-                    )
-                }
-                    Spacer(modifier = Modifier.height(8.dp))
-
-                Box {
-
-                    Text(
-                        text = "Nama: Eliezer Renden",
-                        fontSize = 12.sp,
-                        textAlign = TextAlign.Center,
-                    )
-                }
-                    Text(
-                        text = "NIM: D121211065",
-                        fontSize = 12.sp
-
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-
-                Box {
-
-
-                    Row {
-                        Icon(
-                            Icons.Rounded.Call,
-                            contentDescription = "Contact",
-                            modifier = Modifier.size(15.dp)
-                        )
-                        BasicText(
-                            text = " 08123xxxxxxxx"
-                        )
-                    }
-                }
-                Box {
-
-
-                    Row {
-                        Icon(
-                            Icons.Rounded.Email,
-                            contentDescription = "Email",
-                            modifier = Modifier
-                                .size(15.dp)
-                        )
-                        BasicText(
-                            text = " eliezer@example.com",
-                            style = TextStyle(fontSize = 15.sp)
-                        )
-                    }
-                }
-
-                }
-
+            KartuNama()
 
         }
         }
     }
 
-
-
-
-@Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun KartuNama(){
     Column (
         modifier = Modifier
             .fillMaxSize(),
@@ -130,7 +61,7 @@ fun GreetingPreview() {
         Box {
             Image(
                 modifier = Modifier
-                    .size(150.dp),
+                    .size(260.dp),
                 painter = painterResource(id = R.drawable.kucing),
                 contentDescription = "Foto Profil",
                 alignment = Alignment.Center
@@ -141,49 +72,57 @@ fun GreetingPreview() {
         Box {
 
             Text(
-                text = "Nama: Eliezer Renden",
-                fontSize = 12.sp,
+                text = "Eliezer Renden R",
+                fontSize = 25.sp,
                 textAlign = TextAlign.Center,
+                fontWeight = FontWeight.Bold
             )
         }
         Text(
-            text = "NIM: D121211065",
-            fontSize = 12.sp
+            text = "D121211065",
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold
 
         )
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
-        Box {
+
+    Column{
 
 
             Row {
                 Icon(
                     Icons.Rounded.Call,
                     contentDescription = "Contact",
-                    modifier = Modifier.size(15.dp)
+                    modifier = Modifier.size(19.dp)
                 )
                 BasicText(
-                    text = " 08123xxxxxxxx"
+                    text = " 08123xxxxxxxx",
                 )
             }
         }
-        Box {
-
 
             Row {
-                Icon(
-                    Icons.Rounded.Email,
-                    contentDescription = "Email",
-                    modifier = Modifier
-                        .size(15.dp)
-                )
-                BasicText(
-                    text = " eliezer@example.com",
-                    style = TextStyle(fontSize = 15.sp)
-                )
+                    Icon(
+                        Icons.Rounded.Email,
+                        contentDescription = "Email",
+                        modifier = Modifier
+                            .size(19.dp)
+                    )
+
+                    Text(
+                        text = " eliezer@example.com",
+                        textAlign = TextAlign.Justify
+                    )
+
             }
         }
+}
 
-    }
-    
+
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview() {
+    KartuNama()
 }
