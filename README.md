@@ -4,4 +4,6 @@
 #NIM: D121211065  
 
 #Solusi jika eror (SDK location not found)  
- -> "File" > "Sync Project with Gradle Files"
+ -> "File" > "Sync Project with Gradle Files"  
+ 
+![Uploading TugasMobile.png…]()
